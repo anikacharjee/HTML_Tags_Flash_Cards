@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Flashcard App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="text-center mb-4">
+            <h1 class="display-4 text-white fw-bold mb-3">
+                <i class="fas fa-code"></i> HTML Tags Flashcards
+            </h1>
+            <p class="text-white-50">Learn HTML tags interactively - Click cards to flip them!</p>
+        </div>
+        
+        <div class="progress-container">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="h4" id="currentCard">1</div>
+                    <small>Current</small>
+                </div>
+                <div class="stat-item">
+                    <div class="h4" id="totalCards">0</div>
+                    <small>Total</small>
+                </div>
+                <div class="stat-item">
+                    <div class="h4" id="correctCount">0</div>
+                    <small>Correct</small>
+                </div>
+                <div class="stat-item">
+                    <div class="h4" id="wrongCount">0</div>
+                    <small>Wrong</small>
+                </div>
+            </div>
+            <div class="progress mt-3" style="height: 8px;">
+                <div class="progress-bar bg-success" role="progressbar" id="progressBar" style="width: 0%"></div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="flashcard" id="flashcard">
+                    <div class="card-front">
+                        <div class="category-badge" id="categoryBadge">Structure</div>
+                        <div class="tag-name" id="tagName">&lt;html&gt;</div>
+                        <p class="text-muted">Click to see description and example</p>
+                        <div class="flip-hint">
+                            <i class="fas fa-redo-alt"></i> Click to flip
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="tag-description" id="tagDescription">
+                            The root element that wraps all content on the page
+                        </div>
+                        <div class="tag-example" id="tagExample">
+                            &lt;html lang="en"&gt;<br>
+                            &nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls text-center">
+            <button class="btn btn-custom btn-primary-custom" id="prevBtn">
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-custom btn-success-custom" id="correctBtn">
+                <i class="fas fa-check"></i> Got it!
+            </button>
+            <button class="btn btn-custom btn-warning-custom" id="wrongBtn">
+                <i class="fas fa-times"></i> Need Review
+            </button>
+            <button class="btn btn-custom btn-primary-custom" id="nextBtn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="text-center">
+            <button class="btn btn-outline-light" id="shuffleBtn">
+                <i class="fas fa-random"></i> Shuffle Cards
+            </button>
+            <button class="btn btn-outline-light ms-2" id="resetBtn">
+                <i class="fas fa-refresh"></i> Reset Progress
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"> </script>
+</body>
+</html>
