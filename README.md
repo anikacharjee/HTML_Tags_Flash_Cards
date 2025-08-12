@@ -108,8 +108,8 @@ A modern, interactive web application for learning HTML tags through flashcards.
 html-flashcard-app/
 │
 ├── index.html         # Main application file - HTML File
-├── script.js          # Script JS File
-└── style.css          # Style CSS File
+├── script.js          # Script (JS) File
+└── style.css          # Style (CSS) File
 ```
 
 ### Ideas for Contributions
